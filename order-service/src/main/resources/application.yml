@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/orderdb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+external:
+  product-service-url: http://localhost:8082
+  cart-service-url: http://localhost:6379
+  payment-service-url: http://localhost:8090
+
+jwt:
+  secret: my-super-long-secret-at-least-32-characters-12345
